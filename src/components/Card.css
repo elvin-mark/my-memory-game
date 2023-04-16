@@ -1,0 +1,45 @@
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    height: 120px;
+    width: 80px;
+    position: relative;
+    transition: transform 0.5s;
+  }
+  
+  .card.show-back {
+    transform: rotateY(180deg);
+    background-image: url("https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png");
+    background-size: cover;
+  }
+  
+  .card-suit {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    z-index: 2;
+    display: flex; 
+    align-items: center; 
+    height: 100%; 
+  }
+
+  .card-front img{
+    margin: 0 auto; 
+  }
+  
+  .card-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  
+  img{
+    width: 100%;
+    /* height: 100%; */
+  }
